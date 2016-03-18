@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="coolArch">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="assets/app.css">
+    
+</head>
+
+<body ng-cloak ng-controller="mainCtrl as vm" layout="column">
+    <div layout="row" flex="5">
+        <md-toolbar class="md-theme-indigo">
+            <h1 class="md-toolbar-tools">Cool Arch</h1>
+        </md-toolbar>
+    </div>
+    <div layout="row" flex="15" layout-align="center center">
+        <md-input-container style="margin-right: 10px;">
+            <label>Select Floor Plan</label>
+            <md-select ng-model="plan">
+                <md-option ng-repeat="plan in vm.floorPlans" value="{{plan.id}}" ng-click="vm.switchFloorPlan(plan.id)">{{plan.name}}</md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+
+
+
+
+    <div layout="row" layout-align="center center">
+        <md-content flex="80" layout="row">
+            <div flex layout="column" layout-align="center center" ng-show="vm.showOne">
+                <div floor-plan-one layout="row"></div>
+            </div>
+
+            <div flex layout="column" layout-align="center center" ng-show="vm.showTwo">
+                <floor-plan-two flex></floor-plan-two>
+            </div>
+
+            <div flex layout="column" layout-align="center center" ng-show="vm.showThree">
+                <floor-plan-three flex></floor-plan-three>
+            </div>
+        </md-content>
+    </div>
+
+
+
+
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/lodash/dist/lodash.js"></script>
+    <script src="app.js"></script>
+    <script src="directives/roomStatus.controller.js"></script>
+    <script src="directives/floorPlanOne.directive.js"></script>
+    <script src="directives/floorPlanTwo.directive.js"></script>
+    <script src="directives/floorPlanThree.directive.js"></script>
+
+
+
+</body>
+
+</html>

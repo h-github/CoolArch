@@ -1,0 +1,27 @@
+<div flex="30" class="md-padding">
+    <md-dialog aria-label="Room Stat">
+        <md-toolbar>
+            <div class="md-toolbar-tools" layout-align="center center" >
+                <h2>{{vm.room.roomNumber}}</h2>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+
+            <div flex layout="row">
+                <h4 flex="80" style="padding-left: 40px" > Clean </h4>
+                <md-checkbox aria-label="Clean Room" flex="20" class="md-secondary" ng-model="vm.room.clean"></md-checkbox>
+            </div>
+            <div flex layout="row">
+                <h4 flex="80" style="padding-left: 40px" > Inspected </h4>
+                <md-checkbox aria-label="Inspected Room" flex="20" class="md-secondary" ng-model="vm.room.inspected"></md-checkbox>
+            </div>
+            <div flex layout="row">
+                <h4 flex="80" style="padding-left: 40px" > Occupied </h4>
+                <md-checkbox aria-label="Occupied Room" flex="20" class="md-secondary" ng-model="vm.room.occupied"></md-checkbox>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions>
+            <md-button ng-click="vm.closeDialog()" class="md-primary">Close</md-button>
+        </md-dialog-actions>
+    </md-dialog>
+</div>
