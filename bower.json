@@ -1,0 +1,21 @@
+{
+  "name": "NodeSite",
+  "version": "0.0.1",
+  "author": "",
+  "description": "",
+  "contributors": [],
+  "main": "./server.js",
+  "keywords": [],
+  "dependencies": {
+    "angular": "^1.5.1",
+    "angular-material": "^1.0.6",
+    "jquery": "^2.2.2",
+    "lodash": "^4.6.1"
+  },
+  "noAnalyze": true,
+  "engines": {
+    "node": ">=0.6"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
