@@ -208,12 +208,12 @@
                     {
                         if(room.inspected)
                         {
-                        return "#00cc66";
+                        return "#009933";
                         }else{
-                            return "#e6e600";
+                            return "#ffff00";
                         }
                     } else{
-                        return "#ff4d4d";
+                        return "#e60000";
                     }
                 };
 
